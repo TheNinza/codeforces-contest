@@ -1,7 +1,7 @@
 {
 	"name": "codeforces-contest",
 	"description": "Provides you with sample inputs and outputs for a codechef contest",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"license": "MIT",
 	"bin": {
 		"codeforces-contest": "index.js",

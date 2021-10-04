@@ -1,6 +1,6 @@
 # codeforces-contest
 
-A Data Structures And Algorithm Visualiser
+Provides you with sample inputs and outputs for a codechef contest
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/theninza/codeforces-contest?style=for-the-badge)&nbsp;
 ![GitHub issues](https://img.shields.io/github/issues/theninza/codeforces-contest?style=for-the-badge)&nbsp;
