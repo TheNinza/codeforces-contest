@@ -49,7 +49,7 @@ const commands = {
 };
 
 const helpText = meowHelp({
-	name: `cfc`,
+	name: `codeforces-contest`,
 	flags,
 	commands
 });

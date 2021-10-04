@@ -1,11 +1,11 @@
 {
 	"name": "codeforces-contest",
 	"description": "Provides you with sample inputs and outputs for a codechef contest",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"license": "MIT",
 	"bin": {
 		"codeforces-contest": "index.js",
-		"cfc": "index.js"
+		"cfc-cli": "index.js"
 	},
 	"author": {
 		"name": "theninza",
@@ -14,7 +14,8 @@
 	},
 	"keywords": [
 		"codeforces-contest",
-		"theninza"
+		"theninza",
+		"cfc-cli"
 	],
 	"files": [
 		"index.js",

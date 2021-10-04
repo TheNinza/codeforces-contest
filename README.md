@@ -10,20 +10,48 @@ Provides you with sample inputs and outputs for a codechef contest
 
 ![Node](https://img.shields.io/badge/NodeJS-05122A?style=for-the-badge&logo=node.js)&nbsp;
 
-## Local Setup
-
-1. Install the dependencies and devDependencies and start the server.
+## Installation
 
 ```sh
-git clone https://github.com/TheNinza/codeforces-contest.git
-cd codeforces-contest
-npm install
+npm i -g codeforces-contest
 ```
 
-2. Link as global package
+You can also run it via npx
 
 ```sh
-npm link
+npx codeforces-contest
+```
+
+## Usage
+
+> Note: If globally installed you can also use `cfc-cli` instead of `codeforces-contest`
+
+```sh
+codeforces-contest <command> [option]
+```
+
+### commands
+
+```sh
+help  #prints help info
+```
+
+### options
+
+```sh
+-u, --url       #Fetches sample inputs and outputs and creates folder for the contest
+
+-f, --folder    #Defines the directory name for the folder in which the files will be
+
+-l, --language  #Preferred language to write files. For example '-l cpp' will create .cpp files to write solutions
+
+-c, --clear     #Clear the console Default: false
+
+--noClear       #Don't clear the console Default: false
+
+-d, --debug     #Print debug info Default: false
+
+-v, --version   #Print CLI version Default: false
 ```
 
 Congratulations!! Now it has been added to your path and can be run as a CLI.
