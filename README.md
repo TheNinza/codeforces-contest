@@ -24,10 +24,20 @@ npx codeforces-contest
 
 ## Usage
 
+```sh
+codeforces-contest <command> [option]
+```
+
+or
+
+```sh
+npx codeforces-contest <command> [option]
+```
+
 > Note: If globally installed you can also use `cfc-cli` instead of `codeforces-contest`
 
 ```sh
-codeforces-contest <command> [option]
+cfc-cli <command> [option]
 ```
 
 ### commands
@@ -52,6 +62,36 @@ help  #prints help info
 -d, --debug     #Print debug info Default: false
 
 -v, --version   #Print CLI version Default: false
+```
+
+## examples
+
+Command
+
+```sh
+codeforces-contest -u https://codeforces.com/contest/159 -f myfolder -l cpp
+```
+
+output
+
+```sh
+codeforces-contest  v1.0.3 by Nikhil Gupta
+Provides you with sample inputs and outputs for a codechef contest
+Type codeforces-contest --help for more info
+
+
+Creating Folder
+
+✔ Fetched Friends or Not
+✔ Fetched Matchmaker
+✔ Fetched String Manipulation 1.0
+✔ Fetched Palindrome pairs
+✔ Fetched Zebra Tower
+
+✔  Completed  Created folder 'myfolder'
+
+
+ℹ  Give a star  https://github.com/TheNinza/codeforces-contest
 ```
 
 Congratulations!! Now it has been added to your path and can be run as a CLI.
