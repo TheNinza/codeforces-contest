@@ -28,16 +28,22 @@ npx codeforces-contest
 codeforces-contest <command> [option]
 ```
 
-or
+> Note: If globally installed you can also use `cfc-cli` instead of `codeforces-contest`
+
+```sh
+cfc-cli <command> [option]
+```
+
+or run it directly using npx
 
 ```sh
 npx codeforces-contest <command> [option]
 ```
 
-> Note: If globally installed you can also use `cfc-cli` instead of `codeforces-contest`
+> I have also created a kind of npx alias called `cfcio` [https://www.npmjs.com/package/cfcio] for convinience
 
 ```sh
-cfc-cli <command> [option]
+npx cfcio <command> [option]
 ```
 
 ### commands
