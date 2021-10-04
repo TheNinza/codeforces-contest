@@ -93,5 +93,3 @@ Creating Folder
 
 ℹ  Give a star  https://github.com/TheNinza/codeforces-contest
 ```
-
-Congratulations!! Now it has been added to your path and can be run as a CLI.
