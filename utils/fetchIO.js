@@ -145,7 +145,7 @@ module.exports = async function fetchIO(url, folderName = '', language = '') {
 		alert({
 			type: `info`,
 			name: `Give a star`,
-			msg: `github link`
+			msg: `https://github.com/TheNinza/codeforces-contest`
 		});
 		process.exit(1);
 	}
@@ -198,6 +198,6 @@ module.exports = async function fetchIO(url, folderName = '', language = '') {
 	alert({
 		type: `info`,
 		name: `Give a star`,
-		msg: `github link`
+		msg: `https://github.com/TheNinza/codeforces-contest`
 	});
 };
