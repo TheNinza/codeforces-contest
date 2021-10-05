@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
+          always-auth: true
       - run: npm ci
       - run: npm publish --access=public
         env:
