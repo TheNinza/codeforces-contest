@@ -1,6 +1,7 @@
 {
 	"name": "codeforces-contest",
-	"description": "Provides you with sample inputs and outputs for a codechef contest",
+
+	"description": "Provides you with sample inputs and outputs for a codeforces contest",
 	"version": "1.0.9",
 	"license": "MIT",
 	"bin": {
