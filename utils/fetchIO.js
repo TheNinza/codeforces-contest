@@ -77,6 +77,7 @@ const createProblemSubFolders = async (
 			const { data } = await axios.get(`https://codeforces.com${link}`);
 
 			const $ = cheerio.load(data);
+		    
 
 			// Getting Inputs
 			const inputs = $('div.sample-test > div.input > pre')
@@ -128,14 +129,33 @@ const createProblemSubFolders = async (
 	}
 };
 
-module.exports = async function fetchIO(url, folderName = '', language = '') {
+module.exports = async function fetchIO(url='', id='', folderName = '', language = '') {
 	const ora = await (await import('ora')).default;
 	spinner = ora('');
-	const codeforcesLink = url;
+	// const codeforcesLink = url;
+    // const contest_id=id;
+	// const { problemLinks, titles } = await getProblems(codeforcesLink);
+	// const contestId = codeforcesLink.split('/').slice(-1)[0];
+	let contestLink;
+	let ID;
+      if(id)
+	  {  
+		contestLink=`https://codeforces.com/contest/${id}`;
+         ID=id;
+      
+	  }
+	  else
+	  {
+		contestLink=url;
+	  }
 
-	const { problemLinks, titles } = await getProblems(codeforcesLink);
-	const contestId = codeforcesLink.split('/').slice(-1)[0];
+	  const codeforcesLink=contestLink;
+	  const contestId=ID;
+	  const { problemLinks, titles } = await getProblems(codeforcesLink);
+    
 
+
+    //-> logic makes folder and subfolder
 	if (!problemLinks.length) {
 		alert({
 			type: `error`,

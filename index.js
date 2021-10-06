@@ -14,11 +14,11 @@ const fetchIO = require('./utils/fetchIO');
 
 const input = cli.input;
 const flags = cli.flags;
-const { clear, debug, url, folder, language } = flags;
+const { id, clear, debug, url, folder, language } = flags;
 
 (async () => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
-	url && (await fetchIO(url, folder, language));
+	( id || url ) && (await fetchIO(url, id, folder, language));
 	debug && log(flags);
 })();
