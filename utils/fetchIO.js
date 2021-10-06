@@ -77,7 +77,6 @@ const createProblemSubFolders = async (
 			const { data } = await axios.get(`https://codeforces.com${link}`);
 
 			const $ = cheerio.load(data);
-		    
 
 			// Getting Inputs
 			const inputs = $('div.sample-test > div.input > pre')
@@ -129,12 +128,19 @@ const createProblemSubFolders = async (
 	}
 };
 
-module.exports = async function fetchIO(url='', id='', folderName = '', language = '') {
+module.exports = async function fetchIO(
+	url = '',
+	id = '',
+	folderName = '',
+	language = ''
+) {
 	const ora = await (await import('ora')).default;
-	spinner = ora('');	
-	  const codeforcesLink = id.length ? `https://codeforces.com/contest/${id}` : url;
-	  const contestId=url.length ? codeforcesLink.split('/').slice(-1)[0]:id;
-	  const { problemLinks, titles } = await getProblems(codeforcesLink);
+	spinner = ora('');
+	const codeforcesLink = id.length
+		? `https://codeforces.com/contest/${id}`
+		: url;
+	const contestId = url.length ? codeforcesLink.split('/').slice(-1)[0] : id;
+	const { problemLinks, titles } = await getProblems(codeforcesLink);
 	if (!problemLinks.length) {
 		alert({
 			type: `error`,

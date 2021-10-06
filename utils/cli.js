@@ -2,11 +2,11 @@ const meow = require('meow');
 const meowHelp = require('cli-meow-help');
 
 const flags = {
-	   id:{
-            type:`string`,
-			alias:`i`,
-			desc: `Fetches input and output using only the contest ID`
-    	},
+	id: {
+		type: `string`,
+		alias: `i`,
+		desc: `Fetches input and output using only the contest ID`
+	},
 	url: {
 		type: `string`,
 		alias: `u`,

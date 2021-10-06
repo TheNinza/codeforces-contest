@@ -19,6 +19,6 @@ const { id, clear, debug, url, folder, language } = flags;
 (async () => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
-	( id || url ) && (await fetchIO(url, id, folder, language));
+	(id || url) && (await fetchIO(url, id, folder, language));
 	debug && log(flags);
 })();
