@@ -131,31 +131,10 @@ const createProblemSubFolders = async (
 
 module.exports = async function fetchIO(url='', id='', folderName = '', language = '') {
 	const ora = await (await import('ora')).default;
-	spinner = ora('');
-	// const codeforcesLink = url;
-    // const contest_id=id;
-	// const { problemLinks, titles } = await getProblems(codeforcesLink);
-	// const contestId = codeforcesLink.split('/').slice(-1)[0];
-	let contestLink;
-	let ID;
-      if(id)
-	  {  
-		contestLink=`https://codeforces.com/contest/${id}`;
-         ID=id;
-      
-	  }
-	  else
-	  {
-		contestLink=url;
-	  }
-
-	  const codeforcesLink=contestLink;
-	  const contestId=ID;
+	spinner = ora('');	
+	  const codeforcesLink = id.length ? `https://codeforces.com/contest/${id}` : url;
+	  const contestId=url.length ? codeforcesLink.split('/').slice(-1)[0]:id;
 	  const { problemLinks, titles } = await getProblems(codeforcesLink);
-    
-
-
-    //-> logic makes folder and subfolder
 	if (!problemLinks.length) {
 		alert({
 			type: `error`,
