@@ -139,6 +139,20 @@ module.exports = async function fetchIO(
 	const codeforcesLink = id.length
 		? `https://codeforces.com/contest/${id}`
 		: url;
+
+	// checking if the url is valid
+	const re = /https:\/\/codeforces\.com\/contest\/[0-9]+/i;
+	if (codeforcesLink.length > 0 && !re.test(codeforcesLink)) {
+		alert({
+			type: `error`,
+			name: `Invalid arguments`,
+			msg: url
+				? `The url entered is invalid`
+				: `Contest ID entered is invalid`
+		});
+		process.exit(1);
+	}
+
 	const contestId = url.length ? codeforcesLink.split('/').slice(-1)[0] : id;
 	const { problemLinks, titles } = await getProblems(codeforcesLink);
 	if (!problemLinks.length) {
