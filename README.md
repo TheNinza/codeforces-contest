@@ -61,13 +61,15 @@ help  #prints help info
 
 -l, --language  #Preferred language to write files. For example '-l cpp' will create .cpp files to write solutions
 
--c, --clear     #Clear the console Default: false
+-c, --clear     #Clear the console, Default: false
 
---noClear       #Don't clear the console Default: false
+--noClear       #Don't clear the console, Default: false
 
--d, --debug     #Print debug info Default: false
+-d, --debug     #Print debug info, Default: false
 
--v, --version   #Print CLI version Default: false
+-v, --version   #Print CLI version, Default: false
+
+-i, --id        #Fetches input and output using only the contest ID, Default:Empty('')
 ```
 
 ## examples
